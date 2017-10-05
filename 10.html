@@ -56,7 +56,7 @@
               <img src="img/10a.jpg" class="detail-img">
             </div>
             <div class="col-xs-12">
-              <img src="img/10b.jpg" class="detail-img">
+              <img src="img/10b.jpg" class="detail-img" id="band">
             </div>
           </div>
           <br />
@@ -99,6 +99,7 @@ I miss you, I miss you, I miss you more <br />
         if (patt.test($(this).val())) {
           $('.btn').show("slow");
           $('.hddn').show("slow");
+          $('#band').hide();
         }
       });
     </script>
