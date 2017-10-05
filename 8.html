@@ -91,7 +91,7 @@
     <script src="js/freelancer.min.js"></script>
     <script>
       var correct = 0;
-      var active;
+      var id;
       var answer = /Good\sTogether|White\sBlood|Army\sof\sOne/gi
       var ques = [{
       "text" : "Cause I would go the distance for you, baby <br />\
@@ -120,8 +120,7 @@
           $(this).width(100).height(100);
         });
 
-        var id = $(this).attr('id');
-        active = id;
+        id = $(this).attr('id');
         $('#text').html(ques[id].text);
         $('#question').html(ques[id].question);
 
@@ -130,6 +129,7 @@
           "height":"400px"
       }, "slow");
       });
+
       $('.venue').keyup(function(e){
         console.log($(this).val());
         if (answer.test($(this).val())) {
@@ -143,7 +143,8 @@
             }
 
           $(this).val('');
-          $('#' + active).empty();
+          console.log(id);
+          $('#' + String(id)).parent().empty();
         }
       });
     </script>
