@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Task 1/15 </title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <!-- Custom styles for this template -->
+    <link href="css/style.css" rel="stylesheet">
+    <style>
+      html, body, header.masthead {
+        background: #3F51B5;
+        padding-top: 20px
+      }
+      .detail-img {
+        border-radius: 3px;
+        width: 70%;
+        height: 70%;
+        box-shadow: 1px 10px 10px 0 rgba(0,0,0,0.2); 
+      }
+      .btn {
+        display: none;
+      }
+      hr {
+        background-color: rgba(0,0,0,0.3);
+      }
+    </style>
+
+  </head>
+
+  <body id="page-top">
+    <div class="row">
+    <header class="masthead col-xs-10  col-xs-offset-1">
+      <div class="container">
+        <div class="intro-text">
+          <img src="img/1.jpg" class="detail-img">
+          <span class="skills">Chasers of the light, <br />
+                          And should we fail to find it, <br />
+                          May we make our own.</span>
+          <hr />
+        </div>
+        <div class="row form-group">
+            <div class="col-xs-4">
+              <select id="day" name="day" class="date form-control">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                  <option value="11">11</option>
+                  <option value="12">12</option>
+                  <option value="13">13</option>
+                  <option value="14">14</option>
+                  <option value="15">15</option>
+                  <option value="16">16</option>
+                  <option value="17">17</option>
+                  <option value="18">18</option>
+                  <option value="19">19</option>
+                  <option value="20">20</option>
+                  <option value="21">21</option>
+                  <option value="22">22</option>
+                  <option value="23">23</option>
+                  <option value="24">24</option>
+                  <option value="25">25</option>
+                  <option value="26">26</option>
+                  <option value="27">27</option>
+                  <option value="28">28</option>
+                  <option value="29">29</option>
+                  <option value="30">30</option>
+              </select>
+            </div>
+            <div class="col-xs-4">
+              <select id="month" name="month" class="date form-control">
+                  <option value="1">January</option>
+                  <option value="2">Febuary</option>
+                  <option value="3">March</option>
+                  <option value="4">April</option>
+                  <option value="5">May</option>
+                  <option value="6">June</option>
+                  <option value="7">July</option>
+                  <option value="8">August</option>
+                  <option value="9">September</option>
+                  <option value="10">October</option>
+                  <option value="11">November</option>
+                  <option value="12">December</option>
+              </select>
+            </div>
+            <div class="col-xs-4">
+              <select id="year" name="year" class="date form-control">
+                  <option value="2014">2014</option>
+                  <option value="2015">2015</option>
+                  <option value="2016">2016</option>
+                  <option value="2017">2017</option>
+
+              </select>
+            </div>
+        </div>
+          <br />
+          <br />
+        <button class="btn material-yellow btn-lg"><a href="2.html">Next</a></button>
+      </div>
+    </header>
+    </div>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/popper/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Contact Form JavaScript -->
+    <script src="js/jqBootstrapValidation.js"></script>
+    <script src="js/contact_me.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="js/freelancer.min.js"></script>
+    <script>
+      $('.date').change(function(e){
+
+        if($('#month').val() == '6' && $('#day').val() == '14' && $('#year').val() == '2017' ) {
+          $('.btn').show("slow");
+        }
+      });
+    </script>
+
+  </body>
+
+</html>

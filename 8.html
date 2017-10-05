@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Task 8/15 </title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <!-- Custom styles for this template -->
+    <link href="css/style.css" rel="stylesheet">
+    <style>
+      html, body, header.masthead {
+        background: #FFC107;
+        padding-top: 20px
+      }
+      .detail-img {
+        border-radius: 3px;
+        height: 50%;
+        width: 100px;
+        height:100px;
+      }
+
+      .btn {
+        display: none;
+      }
+            input:focus, input {
+        text-align: center;
+        color: #fff;
+        background-color: #FFC107;
+      }
+    </style>
+
+  </head>
+
+  <body id="page-top">
+    <div class="row">
+    <header class="masthead col-xs-10  col-xs-offset-1">
+      <div class="container">
+        <div class="intro-text">
+
+          <div class="row">
+            <div class="col-xs-4">
+              <img src="img/8a.jpg" class="detail-img" id="0">
+            </div>
+            <div class="col-xs-4">
+              <img src="img/8b.jpg" class="detail-img" id="1">
+            </div>
+          <div class="col-xs-4">
+              <img src="img/8c.jpg" class="detail-img" id="2">
+            </div>
+          </div>
+          <br />
+          <span class="skills" id="text">
+          </span>
+          <hr />
+        </div>
+            <input class="venue" type="text" placeholder="Answer" >
+        <span class="skills" id="question"></span>
+          <br />
+          <br />
+        <button class="btn material-yellow btn-lg"><a href="9.html">Next</a></button>
+      </div>
+    </header>
+    </div>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/popper/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Contact Form JavaScript -->
+    <script src="js/jqBootstrapValidation.js"></script>
+    <script src="js/contact_me.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="js/freelancer.min.js"></script>
+    <script>
+      var correct = 0;
+      var active;
+      var answer = /Good\sTogether|White\sBlood|Army\sof\sOne/gi
+      var ques = [{
+      "text" : "Cause I would go the distance for you, baby <br />\
+            I'd travel &#39;round the world if you would let me <br />\
+            I'll meet you where the sun it always shines <br />\
+            You're on my mind, all the time <br />\
+            We are not wasting this <br />",
+      "question" : ", Honne"
+
+      }, {
+        "text" : "I'm ready to hope, swing me out of the low <br />\
+                  Wide awake in the glow, can't do it alone <br />\
+                  I'm ready to fly, uncover the light<br />\
+                  Impossible heights <br />",
+        "question" : ", Oh Wonder"
+      },
+      {
+      "text" : "Been around the world <br />\
+                The wonders to view <br />\
+                Been around the world <br />\
+                Looking for someone like you <br />",
+      "question" : ", Coldplay "
+      }]
+      $('.detail-img').click(function(){
+        $('.detail-img').each(function(){
+          $(this).width(100).height(100);
+        });
+
+        var id = $(this).attr('id');
+        active = id;
+        $('#text').html(ques[id].text);
+        $('#question').html(ques[id].question);
+
+        $(this).animate({
+          "width": "400px",
+          "height":"400px"
+      }, "slow");
+      });
+      $('.venue').keyup(function(e){
+        console.log($(this).val());
+        if (answer.test($(this).val())) {
+          $('#text').html("");
+          $('#question').html("");
+          ++correct;
+          if(correct == 3) { 
+            $('.venue').hide();
+            $('.btn').show();
+            
+            }
+
+          $(this).val('');
+          $('#' + active).empty();
+        }
+      });
+    </script>
+
+  </body>
+
+</html>

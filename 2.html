@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Task 2/15 </title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <!-- Custom styles for this template -->
+    <link href="css/style.css" rel="stylesheet">
+    <style>
+      html, body, header.masthead {
+        background: #FFC107;
+        padding-top: 20px
+      }
+      .detail-img {
+        border-radius: 3px;
+        height: 50%;
+      }
+
+      .btn {
+        display: none;
+      }
+    </style>
+
+  </head>
+
+  <body id="page-top">
+    <div class="row">
+    <header class="masthead col-xs-10  col-xs-offset-1">
+      <div class="container">
+        <div class="intro-text">
+
+          <div class="row">
+            <div class="col-xs-5">
+              <img src="img/2a.jpg" class="detail-img">
+            </div>
+            <div class="col-xs-offset-1 col-xs-5">
+              <img src="img/2b.jpg" class="detail-img">
+            </div>
+          </div>
+          <br />
+          <span class="skills">
+
+            “He wears his heart out on his sleeve,” she wailed, “where everyone can see!” <br />
+            “You hae no need to feel aggrieved,” I said, “no one reads poetry.” <br />
+            “But what if,” she persisted, “but what if they did? He leaves it out <br />
+            And doesn't even check it. What if someone steals it? What about <br />
+            If it grows stale? If it goes bad? Or rots or dies or falls apart <br />
+            And spawns anew in its entrails a colony of mutant hearts - “ <br />
+            I sigh. “my dear, do you believe the man has nothing up his sleeve?” <br />
+            -Making Love With Scrabble Tiles, Joshua Ip
+          </span>
+          <hr />
+        </div>
+        <div class="row form-group">
+          <div class="col-xs-8 col-xs-offset-2">
+            <input class="form-control venue" type="text" placeholder="Venue" >
+          </div>
+        </div>
+          <br />
+          <br />
+        <button class="btn material-yellow btn-lg"><a href="3.html">Next</a></button>
+      </div>
+    </header>
+    </div>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/popper/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Contact Form JavaScript -->
+    <script src="js/jqBootstrapValidation.js"></script>
+    <script src="js/contact_me.js"></script>
+
+    <!-- Custom scripts for this template -->
+    <script src="js/freelancer.min.js"></script>
+    <script>
+      var patt = /Gillman Barracks/gi;
+      $('.venue').keyup(function(e){
+        console.log($(this).val());
+        if (patt.test($(this).val())) {
+          $('.btn').show("slow");
+        }
+      });
+    </script>
+
+  </body>
+
+</html>
